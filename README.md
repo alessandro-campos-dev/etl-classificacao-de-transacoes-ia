@@ -1,23 +1,29 @@
-# 📘 ETL de Transações com IA Generativa  
-### *Projeto de Portfólio – Bootcamp Santander Ciência de Dados*
+# 🧠💳 Classificação Automática de Transações Bancárias (ETL + IA Generativa) 
+### Pipeline completo em Python + Google Colab + OpenAI
 
-Este projeto demonstra um pipeline **ETL completo (Extract, Transform, Load)** usando Python no Google Colab, com integração de **IA Generativa** para classificação automática de transações bancárias.
+Este projeto implementa um **pipeline ETL completo (Extract, Transform, Load)** combinado com um sistema robusto de classificação automática de transações bancárias usando **Regras Determinísticas + IA Generativa (OpenAI)**.
 
-O objetivo é simular uma tarefa comum em instituições financeiras como o Santander: **categorizar automaticamente as despesas dos clientes**, gerando insights financeiros úteis e preparando dados para análises, dashboards e modelos de machine learning.
+O objetivo é transformar extratos bancários crus em uma base de dados limpa, organizada e totalmente categorizada — ideal para dashboards, análises financeiras pessoais e projetos de ciência de dados.
 
 ---
 
-## 📑 Índice
-1. [Objetivo do Projeto](#objetivo-do-projeto)  
-2. [Tecnologias Utilizadas](#tecnologias-utilizadas)  
-3. [Arquitetura do Projeto](#arquitetura-do-projeto)  
-4. [Estrutura de Pastas](#estrutura-de-pastas)  
-5. [Dataset de Exemplo](#dataset-de-exemplo)  
-6. [Executando o Notebook no Colab](#executando-o-notebook-no-colab)  
-7. [Fluxo Completo do ETL](#fluxo-completo-do-etl)  
-8. [Resultados Gerados](#resultados-gerados)  
-9. [Possíveis Melhorias Futuras](#possíveis-melhorias-futuras)  
-10. [Licença](#licença)
+# 📌 Funcionalidades do Projeto
+
+✓ Conexão segura com Google Drive  
+✓ Carregamento automático de CSV  
+✓ Limpeza avançada das descrições  
+✓ Padronização de datas e valores  
+✓ Sistema de classificação híbrido:
+
+1. 🔍 **Regras determinísticas por palavras-chave**  
+2. 🤖 **Classificação via IA Generativa OpenAI (GPT)**  
+3. 🧠 **Fallback heurístico inteligente**  
+4. 🗃️ **Categoria final: Alimentação, Transporte, etc.**
+
+✓ Visualizações estatísticas automáticas  
+✓ Exportação final do dataset transformado  
+✓ Código totalmente documentado para aprendizado
+
 
 ---
 
@@ -43,14 +49,15 @@ Esse tipo de solução é extremamente útil para:
 
 # 🛠 Tecnologias Utilizadas
 
-| Tecnologia | Uso |
-|-----------|-----|
+| Tecnologia | Função |
+|-----------|--------|
 | **Python 3** | Linguagem principal |
-| **Google Colab** | Ambiente de execução |
 | **Pandas** | Manipulação de dados |
-| **Matplotlib / Seaborn** | Visualização |
-| **OpenAI API (IA Generativa)** | Classificação de transações |
-| **python-dotenv** | Gerenciar credenciais |
+| **NumPy** | Processamento numérico |
+| **Matplotlib / Seaborn** | Visualizações |
+| **OpenAI API** | Classificação via IA |
+| **Regex (re)** | Limpeza textual |
+| **Google Drive + Colab** | Ambiente de execução |
 
 ---
 
@@ -67,24 +74,33 @@ Esse tipo de solução é extremamente útil para:
             LOAD
 
 
+---
+# 🤖 Classificação com IA (OpenAI + Regras) 
+### O classificador funciona com um pipeline híbrido:
 
-### ETAPA 1 — Extract  
-- Leitura do arquivo CSV  
-- Validação dos campos  
+1. Regras determinísticas
+Busca palavras-chave como "uber", "supermercado", "farmácia", etc.
 
-### ETAPA 2 — Transform  
-- Conversão de datas  
-- Tratamento de valores  
-- Limpeza das descrições  
-- Padronização textual  
+2. IA Generativa (OpenAI)
+Usa prompt com few-shot e resposta restrita.
 
-### ETAPA 3 — IA Generativa  
-- Envio de prompts para classificar transações  
-- Criação automática da coluna `category`  
+3. Fallback heurístico
+Analisa raízes de palavras.
 
-### ETAPA 4 — Load  
-- Exportação final para CSV  
-- Dataset pronto para BI ou ML  
+5. Categoria Final
+Se nada casar: Outros
 
 ---
+# 📌 Categorias Utilizadas
+### O classificador funciona com um pipeline híbrido:
 
+
+- Transporte
+- Moradia
+- Educação
+- Saúde
+- Entretenimento
+- Compras
+- Salário
+- Serviços
+- Outros
