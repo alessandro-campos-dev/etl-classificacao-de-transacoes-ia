@@ -92,8 +92,6 @@ Se nada casar: Outros
 
 ---
 # 📌 Categorias Utilizadas
-### O classificador funciona com um pipeline híbrido:
-
 
 - Transporte
 - Moradia
@@ -104,3 +102,26 @@ Se nada casar: Outros
 - Salário
 - Serviços
 - Outros
+
+---
+# 🛠️ Como Funciona a Classificação por IA
+O pipeline usa:
+- Few-shot learning
+- Prompt estrito
+- Normalização de texto
+- Verificação de acentos e variações
+- Comparação exata e parcial
+
+Isso garante uma classificação muito mais precisa do que abordagens simples.
+
+---
+# 🙋🏼‍♂️ Autor
+Projeto desenvolvido por Alessandro Campos com foco em:
+- Ciência de Dados
+- Engenharia de Prompt
+- ETL
+- IA Generativa aplicada
+
+Siga me também no linkedin
+https://www.linkedin.com/in/alessandro-campos-60943231/
+
