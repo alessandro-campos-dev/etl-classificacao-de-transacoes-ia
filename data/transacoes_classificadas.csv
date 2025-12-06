@@ -1,0 +1,13 @@
+transaction_id,date,amount,description,description_clean,category
+T001,2024-01-10,59.9,Supermercado Central,supermercado central,Alimentação
+T002,2024-01-11,120.0,Posto Shell,posto shell,Transporte
+T003,2024-01-12,3500.0,Salário Mensal,salário mensal,Salário
+T004,2024-01-15,32.5,Cafeteria Dona Ana,cafeteria dona ana,Alimentação
+T005,2024-01-20,180.0,Compra Online Mercado Livre,compra online mercado livre,Alimentação
+T006,2024-01-22,15.0,Uber viagem,uber viagem,Transporte
+T007,2024-01-25,220.0,Restaurante Sushi House,restaurante sushi house,Alimentação
+T008,2024-01-28,98.0,Padaria Pão Doce,padaria pão doce,Alimentação
+T009,2024-02-28,198.0,Netflix,netflix,Entretenimento
+T010,2024-02-27,1098.0,Condominio,condominio,Moradia
+T011,2024-02-26,980.0,Medico,medico,Saúde
+T012,2024-02-25,1980.0,Faculdade,faculdade,Educação
